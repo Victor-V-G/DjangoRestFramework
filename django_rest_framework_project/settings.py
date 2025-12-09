@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
     'coreapi',
-    'empleado'
+    'empleado',
+    'usuario',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -136,9 +139,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #autorizaciones cors
-CORS_ALLOWED_ORIGINS = [
-    
-]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
 #instalacion de documentacion automatica, alojada en http://127.0.0.1:8000/empleado/docs/
 REST_FRAMEWORK = {
